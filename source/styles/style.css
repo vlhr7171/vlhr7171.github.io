@@ -1,0 +1,43 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    font-family: Helvetica;
+}
+
+
+
+
+#tree {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+.img-fluid{
+    color: aquamarine;
+}
+ 
+.btn{
+    padding-bottom: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;
+
+
+}
+
+.legend{
+    display: flex;
+    
+}
+
+
+.btn-group{
+    width: 12px;
+}
+
+

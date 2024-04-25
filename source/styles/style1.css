@@ -1,0 +1,25 @@
+body{
+    color: aquamarine;
+}
+
+nav{
+    background: linear-gradient(270deg, #00009c 0%, #000000 100%);
+}
+
+.person-card{
+    background: linear-gradient(270deg, #00009c 0%, #000000 100%);
+}
+
+.person-name{
+    text-align: center;
+}
+
+.dropdown-menu{
+    background:linear-gradient(90deg, #00009c 0%, #000000 100%);
+}
+
+
+
+  
+
+
