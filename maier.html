@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="source/styles/style1.css">
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .link {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 1px;
+        }
+
+        .node circle {
+            fill: #fff;
+            stroke: steelblue;
+            stroke-width: 3px;
+        }
+
+        .node text {
+            font: 11px sans-serif;
+            fill: aquamarine;
+        }
+    </style>
+
+    <title>Familie</title>
+
+</head>
+<script>console.log(data);
+</script>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="source/images/112.jpg" alt=". . ."></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                Hermann
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="hermann.html">Familienbaum</a></li>
+                                <li class="btn-group dropend">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                        Vladimir</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                        <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                        <li class="btn-group dropend">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                role="button" data-bs-toggle="dropdown" data-bs-auto-close="true"
+                                                aria-expanded="false">
+                                                ВС в конце
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                                <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                                <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="btn-group dropend">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                        Hermann
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                        <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                        <li class="btn-group dropend">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                role="button" data-bs-toggle="dropdown" data-bs-auto-close="true"
+                                                aria-expanded="false">
+                                                ВС в конце
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                                <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                                <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                Maier
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="maier.html">Familienbaum</a></li>
+                                <li class="btn-group dropend">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                        Maier</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                        <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                        <li class="btn-group dropend">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                role="button" data-bs-toggle="dropdown" data-bs-auto-close="true"
+                                                aria-expanded="false">
+                                                ВС в конце
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                                <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                                <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="btn-group dropend">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                        Maier
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                        <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                        <li class="btn-group dropend">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                role="button" data-bs-toggle="dropdown" data-bs-auto-close="true"
+                                                aria-expanded="false">
+                                                ВС в конце
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                                <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                                <li><a class="dropdown-item" href="#">Элемент меню</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+            <script>
+                document.querySelectorAll('.dropdown-menu a.dropdown-toggle').forEach(function (element) {
+                    element.addEventListener('click', function (e) {
+                        // Останавливаем всплывание события
+                        e.stopPropagation();
+
+                        let nextEl = element.nextElementSibling;
+                        if (nextEl && nextEl.classList.contains('dropdown-menu')) {
+                            e.preventDefault();
+                            if (nextEl.style.display == 'block') {
+                                nextEl.style.display = 'none';
+                            } else {
+                                nextEl.style.display = 'block';
+                            }
+
+                            // Закрыть другие подменю, кроме текущего
+                            let openMenus = element.closest('.dropdown-menu').querySelectorAll('.dropdown-menu');
+                            for (let i = 0; i < openMenus.length; i++) {
+                                if (openMenus[i] !== nextEl) openMenus[i].style.display = 'none';
+                            }
+                        }
+                    });
+                });
+
+
+            </script>
+        </nav>
+    </header>
+
+    <section class="section" mx-2>
+
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script>
+            // Структура данных
+            const data = {
+                name: "????",
+                children: [
+                    {
+                        name: "Nikolaus-Bartel Maier",
+                        children: [
+                            {
+                                name: "Peter Maier",
+                                children: [
+                                    {
+                                        name: "Margaretha Maier (Sander)"
+                                    },
+                                    {
+                                        name: "Katharina Maier"
+                                    },
+                                    {
+                                        name: "Johannes Maier"
+                                    },
+                                    {
+                                        name: "Gertrude Maier"
+                                    },
+                                    {
+                                        name: "Peter Maier",
+                                        children: [
+                                            {
+                                                name: "Simon Maier",
+                                                children: [
+                                                    {
+                                                        name: "Ewald Maier",
+                                                        children:
+                                                            [
+                                                                {
+                                                                    name: "Eugenia Maier",
+                                                                    children:
+                                                                        [
+                                                                            {
+                                                                                name: "Igor Maier"
+                                                                            },
+                                                                            {
+                                                                                name: "Eugen Maier"
+                                                                            }
+                                                                        ]
+                                                                },
+                                                                {
+                                                                    name: "Olga Maier",
+                                                                    children: [
+                                                                        {
+                                                                            name: "Linda Maier"
+                                                                        }
+                                                                    ]
+
+
+
+                                                                }
+                                                            ]
+                                                    },
+                                                    {
+                                                        name: "Viktor Maier",
+                                                        children:
+                                                            [
+                                                                {
+                                                                    name: "Juri Maier",
+                                                                    children:
+                                                                        [
+                                                                            {
+                                                                                name: "Igor Maier"
+                                                                            }
+                                                                        ]
+                                                                },
+                                                                {
+                                                                    name: "Ludmila Maier (Klassen)",
+                                                                    children:
+                                                                        [
+                                                                            {
+                                                                                name: "Andreij Klassen"
+                                                                            }
+                                                                        ]
+                                                                }
+                                                            ]
+
+                                                    },
+                                                    {
+                                                        name: "Waldemar Maier"
+                                                    },
+                                                    {
+                                                        name: "Erika Maier"
+                                                    },
+                                                    {
+                                                        name: "Artur Maier"
+                                                    },
+                                                ]
+                                            },
+                                            {
+                                                name: "Marta Maier (Hunger)",
+                                                children:
+                                                    [
+                                                        {
+                                                            name: "Adolf Hunger"
+                                                        },
+                                                        {
+                                                            name: "Maria Hunger"
+                                                        },
+                                                        {
+                                                            name: "Peter Hunger"
+                                                        },
+                                                        {
+                                                            name: "Ewald Hunger"
+                                                        },
+                                                        {
+                                                            name: "Elvira Hunger ()"
+                                                        },
+                                                        {
+                                                            name: "Erna Hunger"
+                                                        },
+                                                    ]
+                                            },
+                                            {
+                                                name: "Peter Maier",
+                                                children:
+                                                    [
+                                                        {
+                                                            name: "Rheinhold Maier",
+                                                            children:
+                                                                [
+                                                                    {
+                                                                        name: "Viktor Maier"
+                                                                    }
+                                                                ]
+                                                        },
+                                                        {
+                                                            name: "Ewald Maier"
+                                                        },
+                                                        {
+                                                            name: "Frida Maier (Podkolzina)",
+                                                            children:
+                                                                [
+                                                                    {
+                                                                        name: "Igor  "
+                                                                    },
+                                                                    {
+                                                                        name: "Walentina"
+                                                                    },
+                                                                    {
+                                                                        name: "Anastasia Soldatowa"
+                                                                    }
+                                                                ]
+                                                        },
+                                                        {
+                                                            name: "Waldemar Maier",
+                                                            children:
+                                                                [
+                                                                    {
+                                                                        name: "Elena Maier"
+                                                                    },
+                                                                    {
+                                                                        name: "Olga Maier"
+                                                                    }
+                                                                ]
+                                                        },
+                                                        {
+                                                            name: "Sophia(Sonja) Maier"
+                                                        },
+                                                        {
+                                                            name: "Artur Maier",
+                                                            children:
+                                                                [
+                                                                    {
+                                                                        name: "Eduard Maier"
+                                                                    },
+                                                                    {
+                                                                        name: "Viktoria Maier"
+                                                                    }
+                                                                ]
+                                                        },
+                                                        {
+                                                            name: "Alexander Maier",
+                                                            children:
+                                                                [
+                                                                    {
+                                                                        name: "Waldemar Maier"
+                                                                    },
+                                                                    {
+                                                                        name: "Werner Maier"
+                                                                    }
+                                                                ]
+                                                        },
+                                                        {
+                                                            name: "Anton Maier"
+                                                        },
+                                                    ]
+                                            },
+                                            {
+                                                name: "Maria Maier (Hahn)",
+                                                children:
+                                                    [
+                                                        {
+                                                            name: "Alexander Hahn"
+                                                        },
+                                                        {
+                                                            name: "Erika Hahn"
+                                                        },
+                                                        {
+                                                            name: "Artur Hahn"
+                                                        },
+                                                        {
+                                                            name: "Raida Hahn (Kudenko)"
+                                                        },
+                                                        {
+                                                            name: "Waldemar Hahn"
+                                                        },
+                                                    ]
+                                            },
+                                            {
+                                                name: "Alexander Maier",
+                                                children:
+                                                    [
+                                                        {
+                                                            name: "Viktor Maier",
+                                                            children:
+                                                                [
+                                                                    {
+                                                                        name: "Alexander Maier"
+                                                                    },
+                                                                    {
+                                                                        name: "Nikolai Maier"
+                                                                    }
+                                                                ]
+                                                        },
+                                                        {
+                                                            name: "Ella Maier"
+                                                        },
+                                                        {
+                                                            name: "Alexander Maier"
+                                                        },
+                                                        {
+                                                            name: "Maria Maier"
+                                                        },
+                                                        {
+                                                            name: "Rudolf Maier"
+                                                        },
+                                                        {
+                                                            name: "Waldemar maier"
+                                                        },
+                                                    ]
+                                            },
+                                            {
+                                                name: "Anton Maier",
+                                                children:
+                                                    [
+                                                        {
+                                                            name: "Viktor Maier",
+                                                            children:
+                                                                [
+                                                                    {
+                                                                        name: "Elena Maier (Unger)",
+                                                                        children:
+                                                                            [
+                                                                                {
+                                                                                    name: "Maria-Nadia Unger"
+                                                                                }
+                                                                            ]
+                                                                    },
+                                                                    {
+                                                                        name: "Viktor Maier",
+                                                                        children: 
+                                                                        [
+                                                                            {},
+                                                                            {}
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        name: "Galina Maier",
+                                                                        children: 
+                                                                        [
+                                                                            {
+                                                                                name: "Viktor"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                        },
+                                                        {
+                                                            name: "Vladimir Maier"
+                                                        },
+                                                        {
+                                                            name: "Alexander Maier"
+                                                        },
+                                                        {
+                                                            name: "Maria Maier"
+                                                        },
+                                                    ]
+                                            },
+                                            {
+                                                name: "Viktoria Hermann (Maier)",
+                                                children:
+                                                    [
+                                                        {
+                                                            name: "Alexander Hermann",
+                                                            children:
+                                                                [
+                                                                    {
+                                                                        name: "Vladimir Hermann",
+                                                                        children:
+                                                                            [
+                                                                                {
+                                                                                    name: "Violetta Hermann"
+                                                                                },
+                                                                                {
+                                                                                    name: "Maxim Hermann"
+                                                                                }
+                                                                            ]
+                                                                    },
+                                                                    {
+                                                                        name: "Juri Hermann",
+                                                                        children:
+                                                                            [
+                                                                                {
+                                                                                    name: "Vladislav Hermann"
+                                                                                },
+                                                                                {
+                                                                                    name: "Michael Hermann"
+                                                                                }
+                                                                            ]
+                                                                    }
+                                                                ]
+                                                        },
+                                                        {
+                                                            name: "Viktor Hermann",
+                                                            children:
+                                                                [
+                                                                    {
+                                                                        name: "Viktoria Hermann",
+                                                                        children:
+                                                                            [
+                                                                                { name: "Maxim Hermann" }
+                                                                            ]
+                                                                    },
+                                                                    {
+                                                                        name: "Olga Hermann",
+                                                                        children:
+                                                                            [
+                                                                                {
+                                                                                    name: "Kamischa Hermann"
+                                                                                },
+                                                                                {
+                                                                                    name: "Elisa Hermann"
+                                                                                }
+                                                                            ]
+                                                                    }
+                                                                ]
+                                                        }
+                                                    ]
+                                            },
+                                        ]
+                                    },
+                                    {
+                                        name: "Nikolaus Maier"
+                                    },
+                                    {
+                                        name: "Barbara Maier"
+                                    },
+                                    {
+                                        name: "Michael Maier"
+                                    },
+
+                                ]
+                            }
+                        ]
+
+
+                    }
+
+                ]
+            };
+
+
+            function updateSize() {
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+                const margin = { top: 20, right: 100, bottom: 100, left: 100 }; // Отступы
+
+                d3.select('svg')
+                    .attr('width', width)
+                    .attr('height', height);
+
+                const svg = d3.select('svg').select('g')
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")"); // Смещение всего группового элемента
+
+                const root = d3.hierarchy(data);
+                const treeLayout = d3.tree().size([height - margin.top - margin.bottom, width - margin.left - margin.right]);
+                treeLayout(root);
+
+                svg.selectAll('.link').remove();
+                svg.selectAll('.node').remove();
+
+
+                // Создание связей (линий)
+                svg.selectAll('.link')
+                    .data(root.links())
+                    .enter()
+                    .append('path')
+                    .attr('class', 'link')
+                    .attr('d', d3.linkHorizontal()
+                        .x(d => width - margin.right - margin.left - d.y) // Зеркальное отображение
+                        .y(d => d.x))
+                    .attr('stroke', '#ccc') // Установка цвета линий
+                    .attr('fill', 'none') // Убедиться, что фон линии прозрачный
+                    .attr('stroke-width', 2); // Здесь устанавливаем толщину линий   
+
+
+
+
+                // Создание узлов
+                const nodes = svg.selectAll('.node')
+                    .data(root.descendants())
+                    .enter()
+                    .append('g')
+                    .attr('class', 'node')
+                    .attr('transform', d => `translate(${width - margin.right - margin.left - d.y},${d.x}) scale(0.9)`); // Добавлено масштабирование
+
+                nodes.append('circle')
+                    .attr('r', 5)
+                    .on('click', (event, d) => {
+                        console.log(d.data.name);
+                    });
+
+                nodes.append('text')
+                    .attr('dy', 3)
+                    .attr('x', d => d.children ? 15 : -15)
+                    .style("text-anchor", d => d.children ? "start" : "end")
+                    .style("font-size", "11px")
+                    .text(d => d.data.name)
+                    .on('click', (event, d) => {
+                        alert(`Информация о: ${d.data.name}`);
+                    });
+            }
+
+            // Первоначальное создание SVG и раскладки дерева
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            const svg = d3.select('body').append('svg')
+                .attr('width', width)
+                .attr('height', height)
+                .append("g");
+
+            window.addEventListener('resize', updateSize); // Обновление при изменении размеров окна
+            updateSize(); // Инициализация
+
+        </script>
+
+
+
+
+    </section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
