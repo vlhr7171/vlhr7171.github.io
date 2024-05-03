@@ -1,0 +1,44 @@
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* минимальная высота вьюпорта */
+    font-family: Michroma, serif;
+    background: linear-gradient(90deg, #00009c 0%, #000000 100%);
+  
+  
+  }
+  
+  .nav-link {
+    color: aquamarine;
+  
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: rgb(142, 150, 150);
+  }
+  
+  .navbar-brand img {
+    width: 40px;
+  }
+  
+  .navbar-toggler {
+    background-color: rgb(142, 150, 150);
+    ;
+  }
+  
+  .dropdown-menu {
+  
+    background: linear-gradient(270deg, #00009c 0%, #000000 100%);
+  }
+  
+  .dropdown-item {
+    color: aquamarine;
+  }
+  .const data {
+    color: aquamarine;
+  }
+  
