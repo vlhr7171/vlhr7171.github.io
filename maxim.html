@@ -20,6 +20,43 @@
       margin: 0;
       padding: 0;
     }
+    .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .popup .popuptext {
+        visibility: hidden;
+        width: 160px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+    }
+
+    .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+
+    .popup:hover .popuptext {
+        visibility: visible;
+    }
+
+    
   </style>
 </head>
 
@@ -214,13 +251,18 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-4 col-md-12 footer-text text-center">
-          <p>All Richts Reserved 2024</p>
+          <p>All Rights Reserved 2024</p>
         </div>
         <div class="col-lg-4 col-md-12 footer-text text-center">
-          <p>Contacts<br>Job<br>Our Team</p>
+          <p>Contacts<br>Our Team</p>
         </div>
         <div class="col-lg-4 col-md-12 media-links">
-          <img style="width: 40px; margin-inline: 1em" src="source/files/phone.png" alt=". . .">
+          <div class="popup">
+            <a href="tel:+4917621903639">
+              <img style="width: 40px; margin-inline: 1em" src="source/files/phone.png" alt=". . .">
+            </a>
+            <span class="popuptext">+49 176 21903639</span>
+          </div>        
         </div>
       </div>
     </div>
